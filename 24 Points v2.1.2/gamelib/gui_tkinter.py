@@ -114,7 +114,7 @@ class Tkinter_Game():
         #第四張撲克牌的顯示畫布
         self.poker_canvas_4th = Canvas(self.poker_frame, width=self.poker_canvas_width, height=self.poker_canvas_height, borderwidth=0, relief='raised')
         self.poker_canvas_4th.place(x=self.poker_canvas_width*7, y=int(self.poker_canvas_height / 6))
-        
+
         #放置撲克牌與上述畫布中
         self.place_pokers()
 
@@ -280,15 +280,15 @@ class Tkinter_Game():
         #乘號（✖️）
         self.board_button_multiplier = Button(root, text='*', command=self.operator_multiplier)
         self.board_button_multiplier.place(x=self.operator_button_width*1, y=(self.poker_height + self.state_height + self.operator_button_height*5))
-        
+
         #除號（➗）
         self.board_button_devider = Button(root, text='/', command=self.operator_devider)
         self.board_button_devider.place(x=self.operator_button_width*1, y=(self.poker_height + self.state_height + self.operator_button_height*7))
-        
+
         #左括號（(）
         self.board_button_bracketLeft = Button(root, text='(', command=self.operator_bracketLeft)
         self.board_button_bracketLeft.place(x=self.operator_button_width*1, y=(self.poker_height + self.state_height + self.operator_button_height*9))
-        
+
         #右括號（)）
         self.board_button_bracketRight = Button(root, text=')', command=self.operator_bracketRight)
         self.board_button_bracketRight.place(x=self.operator_button_width*1, y=(self.poker_height + self.state_height + self.operator_button_height*11))
@@ -396,7 +396,7 @@ class Tkinter_Game():
         self.state += '('
         self.state_string += '('
         #print self.state
-        self.bracket_counter += 1 
+        self.bracket_counter += 1
         self.state_refresh(self.root_window)
 
         '''
@@ -404,7 +404,7 @@ class Tkinter_Game():
         #self.bracketLeft_button_active()
         self.bracketRight_button_disable()
         self.poker_button_active()
-        '''  
+        '''
 
     #右括號按鍵（)）按鍵
     def operator_bracketRight(self):
@@ -626,11 +626,11 @@ class Tkinter_Game():
             if char == 'A':
                 self.state += '10'
             elif char == 'B':
-                self.state += '11'                
+                self.state += '11'
             elif char == 'C':
                 self.state += '12'
             elif char == 'D':
-                self.state += '13'                
+                self.state += '13'
             else:   #int(char) < 10 and not char.isalnum()
                 self.state += char
 
